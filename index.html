@@ -3,73 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Awais - CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="cv.css">
+    <title>CV - Muhammad Awais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 50%;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: left;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
+        }
+        h3 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            animation: slideInLeft 1.5s ease-in-out;
+        }
+        p, ul, div {
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 5px 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .profile-img {
+            display: block;
+            margin: 0 auto 15px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            animation: bounceIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-30px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.9); opacity: 0; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="header">
-        <img src="pic.jpg" alt="Profile Picture" class="profile-img">
-        <h1>Muhammad Awais</h1>
-        <p>Front End Developer</p>
+    <div class="container">
+        <img src="profile.jpg" alt="Muhammad Awais" class="profile-img" itemprop="image">
+        <div itemscope itemtype="https://schema.org/Person">
+            <h2 itemprop="name">Muhammad Awais</h2>
+            <p><strong>Job Title:</strong> <span itemprop="jobTitle">Front-End Web Developer</span></p>
+            <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <p><strong>Address:</strong> <span itemprop="streetAddress">Hussian Park St#2</span>, <span itemprop="addressLocality">Sargodha</span></p>
+            </div>
+            <p><strong>Phone:</strong> <span itemprop="telephone">03117903214</span></p>
+            <p><strong>Email:</strong> <a href="mailto:awaisanwar937@gmail.com" itemprop="email">awaisanwar937@gmail.com</a></p>
+            
+            <h3>Education</h3>
+            <p><strong>University:</strong> <span itemprop="name">University of Sargodha</span> (BSCS - CGPA: 3.26/4.0) (2021-2025)</p>
+            <p><strong>College:</strong> <span itemprop="name">Reader Group of Colleges</span> (Intermediate ICS - Physics) (859/1100) (2018-2020)</p>
+            
+            <h3>Experience</h3>
+            <p><strong>Company:</strong> <span itemprop="name">Pixiders</span></p>
+            <p><strong>Role:</strong> <span itemprop="jobTitle">Front-End Developer</span> (2023 - Present)</p>
+            <p>Worked as a junior Front-End Developer with 6 months of experience.</p>
+            
+            <h3>Projects</h3>
+            <ul>
+                <li><strong itemprop="knowsAbout">Pixider Front-End Design:</strong> Developed a responsive front-end for Pixider using React.js and Bootstrap.</li>
+                <li><strong itemprop="knowsAbout">Other Web Development Projects:</strong> Built and maintained multiple responsive websites using modern web technologies.</li>
+            </ul>
+            
+            <h3>Skills</h3>
+            <ul>
+                <li itemprop="skills">Front-End Development (React.js, Bootstrap, Tailwind CSS)</li>
+                <li itemprop="skills">Responsive Web Design</li>
+                <li itemprop="skills">Basic Back-End Development</li>
+            </ul>
+            
+            <h3>Languages</h3>
+            <ul>
+                <li itemprop="knowsLanguage">Urdu (Native)</li>
+                <li itemprop="knowsLanguage">English (Proficient)</li>
+            </ul>
+            
+            <h3>Interests</h3>
+            <ul>
+                <li itemprop="interest">Problem-Solving</li>
+                <li itemprop="interest">Watching Documentaries</li>
+                <li itemprop="interest">Learning New Technologies</li>
+            </ul>
+        </div>
     </div>
-
-    <div class="section contact">
-        <h2>Contact</h2>
-        <ul>
-            <li>📞 03117903214</li>
-            <li>📧 <a href="mailto:awaisanwar937@gmail.com">awaisanwar937@gmail.com</a></li>
-        </ul>
-    </div>
-
-    <div class="section education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Bachelors of Computer Sciences</strong> - University Of Sargodha (2021 - 2025)</li>
-            <li><strong>ICS ( Physics )</strong> - Reader College Sargodha (2018 - 2020)</li>
-        </ul>
-    </div>
-
-
-    <div class="section skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>✅ Fron End Development (React Js, Bootstrap)</li>
-            <li>✅ Database: MySQLi</li>
-            <li>✅ Programming: C++</li>
-        </ul>
-    </div>
-
-    <div class="section achievements">
-        <h2>Experience</h2>
-        <ul>
-            <li>6 Months - Front End Developer at <strong>Pixiders</strong></li>
-        </ul>
-    </div>
-
-    <div class="section interests">
-        <h2>Interests</h2>
-        <ul>
-            <li>🎮 Video Games</li>
-            <li>🎥 Watching Documentry</li>
-            <li>📱 Learning new Web Development technologies</li>
-        </ul>
-    </div>
-
-    <div class="section languages">
-        <h2>Languages</h2>
-        <ul>
-            <li>🇬🇧 English</li>
-            <li>🇵🇰 Urdu</li>
-        </ul>
-    </div>
-
-    <div class="footer">
-        <p>© 2025 Muhammad Awais | Front End web Developer</p>
-    </div>
-</div>
-
 </body>
 </html>
